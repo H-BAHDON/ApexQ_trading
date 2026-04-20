@@ -1,0 +1,142 @@
+{
+  "theme": "dark",
+  "archetype": "Hybrid: 4 (Swiss & High-Contrast) + 5 (Jewel & Luxury)",
+  "brand": {
+    "parent": "ApexQ",
+    "product": "Compression Ladder"
+  },
+  "colors": {
+    "background": {
+      "base": "#030303",
+      "surface_1": "#0A0A0A",
+      "surface_2": "#121212"
+    },
+    "text": {
+      "primary": "#FFFFFF",
+      "secondary": "#A1A1AA",
+      "muted": "#52525B"
+    },
+    "accent": {
+      "primary": "#10B981",
+      "primary_glow": "rgba(16, 185, 129, 0.15)",
+      "secondary": "#EF4444",
+      "secondary_glow": "rgba(239, 68, 68, 0.15)",
+      "border": "#27272A",
+      "border_light": "#3F3F46"
+    }
+  },
+  "typography": {
+    "fonts": {
+      "heading": "Cabinet Grotesk, sans-serif",
+      "body": "IBM Plex Sans, sans-serif",
+      "mono": "JetBrains Mono, monospace"
+    },
+    "hierarchy": {
+      "h1": "text-5xl md:text-6xl lg:text-7xl tracking-tighter font-medium leading-[1.1]",
+      "h2": "text-3xl md:text-4xl tracking-tight font-medium",
+      "h3": "text-xl md:text-2xl font-medium tracking-tight",
+      "body": "text-base md:text-lg text-zinc-400 leading-relaxed",
+      "label": "text-xs uppercase tracking-[0.2em] font-medium text-zinc-500",
+      "mono_stats": "font-mono text-sm tracking-tight text-emerald-400"
+    }
+  },
+  "layout_spacing": {
+    "strategy": "Generous Spacing Philosophy. The 'Tetris' Grid (Mode A) for features.",
+    "section_padding": "py-24 md:py-32",
+    "container": "max-w-7xl mx-auto px-6 md:px-12",
+    "bento_gap": "gap-6 md:gap-8"
+  },
+  "surfaces_and_components": {
+    "bento_card": "bg-[#0A0A0A] border border-zinc-800 rounded-2xl p-8 relative overflow-hidden transition-colors hover:border-zinc-700",
+    "glass_header": "fixed top-0 w-full z-50 backdrop-blur-xl bg-[#030303]/70 border-b border-zinc-800/60",
+    "button_primary": "bg-emerald-500 text-black px-8 py-4 font-medium hover:bg-emerald-400 transition-all flex items-center justify-center gap-2",
+    "button_secondary": "bg-transparent border border-zinc-700 text-white px-8 py-4 font-medium hover:bg-zinc-900 transition-all flex items-center justify-center gap-2",
+    "input_field": "bg-[#121212] border border-zinc-800 text-white px-4 py-4 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all w-full placeholder:text-zinc-600",
+    "ladder_motif": "Use horizontal 1px border lines (border-b border-zinc-800) across sections to simulate a 'ladder' or 'grid' background."
+  },
+  "animations": {
+    "global": "Subtle, no flashy bounces. Professional quant finance feel.",
+    "entrance": "Staggered fade-up (Framer Motion: y: 20, opacity: 0 -> y: 0, opacity: 1, duration: 0.6, ease: 'easeOut')",
+    "hover": "Cards lift slightly (-translate-y-1) and border color lightens. Buttons scale up 1.02."
+  },
+  "media_urls": {
+    "hero_background": {
+      "url": "https://images.unsplash.com/photo-1764258560296-04404549a022?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTF8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGdlb21ldHJpYyUyMGRhcmslMjBncmVlbiUyMHJlZHxlbnwwfHx8fDE3NzY3MTk3ODV8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Abstract neon green/red lines on black. Use as a low opacity (10-15%) background image behind the hero. Add a radial mask so it fades into black at the edges.",
+      "category": "background"
+    },
+    "product_chart_1": {
+      "url": "https://images.unsplash.com/photo-1643962577481-4ff81600e439?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzB8MHwxfHNlYXJjaHwyfHx0cmFkaW5nJTIwY2hhcnQlMjBkYXJrJTIwbW9uaXRvcnxlbnwwfHx8fDE3NzY3MTk3ODV8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Premium stock chart on screen. Use as the main visual for the Hero mockup or 'View Example' section.",
+      "category": "product_visual"
+    },
+    "product_chart_2": {
+      "url": "https://images.pexels.com/photos/5831529/pexels-photo-5831529.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Close-up cryptocurrency trading chart. Use for 'Chart Examples' and 'How It Works' feature cards.",
+      "category": "feature_visual"
+    }
+  },
+  "page_sections": [
+    {
+      "id": "header",
+      "purpose": "Navigation and Trust",
+      "details": "Sticky glass header. Left: 'ApexQ' logo. Middle: Hidden on mobile, links (Features, Examples, Pricing). Right: 'Get Access' button (small variant).",
+      "test_ids": ["nav-logo", "nav-links", "nav-get-access-btn"]
+    },
+    {
+      "id": "hero",
+      "purpose": "High-conversion entry point",
+      "details": "Centered layout with generous top padding (pt-40). H1: 'See when the market is about to move before it happens.' Subtitle: 'Compression Ladder is the boutique quant tool for clarity over noise.' Email Capture Form inline with 'Get Access' button. Followed by a massive, edge-to-edge 'product_chart_1' image with a bottom gradient fade into the next section.",
+      "test_ids": ["hero-h1", "hero-email-input", "hero-submit-btn"]
+    },
+    {
+      "id": "features_bento",
+      "purpose": "Clarity over noise",
+      "details": "3-column bento grid using 'Tetris' logic. Focus on 3 key pillars. Use `bento_card` styling. Incorporate Phosphor Icons (light weight). Accent specific data points with the `mono_stats` typography.",
+      "test_ids": ["features-grid", "feature-card-1", "feature-card-2", "feature-card-3"]
+    },
+    {
+      "id": "how_it_works",
+      "purpose": "3-Step Logic",
+      "details": "Vertical timeline or 3 stepped horizontal cards mimicking a 'Ladder'. Step 1: Detect, Step 2: Confirm, Step 3: Execute. Use subtle green accents for the 'ladder' connecting lines.",
+      "test_ids": ["how-it-works-section", "step-1", "step-2", "step-3"]
+    },
+    {
+      "id": "chart_examples",
+      "purpose": "Social Proof via Product",
+      "details": "Full-width section showcasing `product_chart_2`. Text overlaid or side-by-side with annotations/captions explaining the 'Compression Ladder' methodology.",
+      "test_ids": ["chart-examples-section", "example-image"]
+    },
+    {
+      "id": "comparison",
+      "purpose": "Why It's Different",
+      "details": "Side-by-side layout. Left: Traditional Indicators (noisy, lagging) - use zinc/red tones. Right: Compression Ladder (predictive, clean) - use emerald glows.",
+      "test_ids": ["comparison-section", "traditional-col", "compression-col"]
+    },
+    {
+      "id": "pricing",
+      "purpose": "Conversion",
+      "details": "Single premium card centered on the page. $79/mo. Subtle emerald 'Tracing Beam' or outer glow on the card. Large 'Get Access' CTA connecting to mocked Stripe Checkout. List of premium features below.",
+      "test_ids": ["pricing-card", "pricing-amount", "pricing-checkout-btn"]
+    },
+    {
+      "id": "footer",
+      "purpose": "Legal and Final CTA",
+      "details": "Top half: 'Understand the market before it moves.' with secondary CTA. Bottom half: Huge 'ApexQ' text watermark. Disclaimer block about trading risks. Links to Instagram, Contact, Terms.",
+      "test_ids": ["footer-cta-btn", "footer-disclaimer"]
+    }
+  ],
+  "technical_instructions": {
+    "setup": [
+      "yarn add framer-motion",
+      "yarn add @phosphor-icons/react",
+      "yarn add lucide-react",
+      "yarn add clsx tailwind-merge"
+    ],
+    "guidelines": [
+      "Use RAW HTML/Tailwind for layouts. Avoid overusing pre-built Shadcn containers which limit creative bento grids.",
+      "Ensure all color values use the explicit hex codes or exact tailwind arbitrary values as defined in colors.",
+      "Add `data-testid` to all interactive and major layout nodes."
+    ]
+  }
+}
