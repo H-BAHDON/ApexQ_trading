@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  background-color: #030303;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  min-height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(16, 185, 129, 0.35);
+  color: #ffffff;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #030303;
+}
+::-webkit-scrollbar-thumb {
+  background: #1f1f23;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2a2a2f;
+}
+
+/* Utility layers */
+.font-display {
+  font-family: "Cabinet Grotesk", "IBM Plex Sans", system-ui, sans-serif;
+  font-feature-settings: "ss01", "ss02";
+}
+
+.hairline {
+  background-image: linear-gradient(
+    to right,
+    transparent 0,
+    rgba(255, 255, 255, 0.08) 12%,
+    rgba(255, 255, 255, 0.08) 88%,
+    transparent 100%
+  );
+  height: 1px;
+}
+
+.rail-grid {
+  background-image:
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 100% 64px;
+}
+
+.dot-grid {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.radial-mask {
+  mask-image: radial-gradient(ellipse at center, black 40%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 75%);
+}
+
+.glow-emerald {
+  box-shadow: 0 0 80px -20px rgba(16, 185, 129, 0.35), inset 0 0 0 1px rgba(16, 185, 129, 0.2);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Smooth anchor scroll */
+html {
+  scroll-behavior: smooth;
+}
