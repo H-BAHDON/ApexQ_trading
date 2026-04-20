@@ -135,6 +135,16 @@ class TestCheckout:
         assert "amount_total" in data
         assert "currency" in data
 
+    def test_checkout_status_nonexistent(self, api):
+        # Unknown Stripe session id -> backend should return a client error (400)
+        r = api.get(
+            f"{BASE_URL}/api/checkout/status/cs_test_does_not_exist_{uuid.uuid4().hex[:8]}",
+            timeout=30,
+        )
+        assert r.status_code == 400, r.text
+        data = r.json()
+        assert "detail" in data
+
     def test_webhook_reachable_no_signature(self, api):
         # Expected 400 because no valid Stripe-Signature header
         r = api.post(
