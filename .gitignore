@@ -7,3 +7,7 @@ credentials.json
 *.pem
 *.key
 .credentials
+
+
+# Dependencies
+node_modules/
